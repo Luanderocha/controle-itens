@@ -29,5 +29,23 @@
       "valor":500,
       "descricao":"Possui alguns arranhões"
     }
+  ],
+  "tipos":[
+    {
+      "id":1,
+      "descricao":"Notebook"
+    },
+    {
+      "id":2,
+      "descricao":"Desktop"
+    },
+    {
+      "id":3,
+      "descricao":"Mouse"
+    },
+    {
+      "id":4,
+      "descricao":"Teclado"
+    }
   ]
 }

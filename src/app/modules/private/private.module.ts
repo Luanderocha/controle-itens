@@ -1,8 +1,7 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-import { PrivateRoutingModule } from './private-routing.module';
+import { NgModule } from '@angular/core';
 import { HomeAdmComponent } from './pages/home-adm/home-adm.component';
+import { PrivateRoutingModule } from './private-routing.module';
 
 
 @NgModule({
@@ -10,6 +9,7 @@ import { HomeAdmComponent } from './pages/home-adm/home-adm.component';
   imports: [
     CommonModule,
     PrivateRoutingModule,
-  ]
+  ],
+  providers:[]
 })
 export class PrivateModule { }

@@ -8,7 +8,7 @@ import { PublicRoutingModule } from './public-routing.module';
   declarations: [LoginComponent],
   imports: [
     CommonModule,
-    PublicRoutingModule
+    PublicRoutingModule,
   ]
 })
 export class PublicModule { }

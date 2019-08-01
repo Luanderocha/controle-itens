@@ -1,3 +1,4 @@
+import { FmItemsService } from './../../services/fm-items.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegisterItemsComponent implements OnInit {
 
-  constructor() { }
+  listaTipos: any[];
+
+  constructor(
+    // private cadastroItensService: FmItemsService,
+  ) { }
 
   ngOnInit() {
+    // this.buscarListaTipos();
   }
+
+  // buscarListaTipos(){
+  //   this.cadastroItensService.buscarTipos().subscribe(
+  //     res => this.listaTipos = res
+  //   )
+  // }
 
 }

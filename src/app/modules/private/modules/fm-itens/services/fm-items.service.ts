@@ -14,4 +14,8 @@ export class FmItemsService {
       return this.http.get<any[]>(`${environment.api_url}/itens`).pipe(take(1));
     }
 
+    // buscarTipos(){
+    //   return this.http.get<any[]>(`${environment.api_url}/tipos`).pipe(take(1));
+    // }
+
 }

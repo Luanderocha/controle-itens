@@ -5,9 +5,9 @@ import { RegisterItemsComponent } from './components/register-items/register-ite
 
 
 const routes: Routes = [
-  {path:'' , redirectTo: 'search' , pathMatch:'full'},
-  {path:'search' , component:SearchItemsComponent},
-  {path:'register', component:RegisterItemsComponent}
+  {path:'' , redirectTo: 'pesquisar' , pathMatch:'full'},
+  {path:'pesquisar' , component:SearchItemsComponent},
+  {path:'cadastrar' , component:RegisterItemsComponent}
 ];
 
 @NgModule({
