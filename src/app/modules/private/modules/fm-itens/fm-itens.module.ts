@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { FmItensRoutingModule } from './fm-itens-routing.module';
 import { RegisterItemsComponent } from './components/register-items/register-items.component';
 import { SearchItemsComponent } from './components/search-items/search-items.component';
+import { FmItemsService } from './services/fm-items.service';
 
 
 @NgModule({
@@ -12,9 +13,6 @@ import { SearchItemsComponent } from './components/search-items/search-items.com
     CommonModule,
     FmItensRoutingModule,
   ],
-  exports: [
-    RegisterItemsComponent,
-    SearchItemsComponent
-  ]
+  providers:[FmItemsService]
 })
 export class FmItensModule { }

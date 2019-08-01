@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FmItemsService } from '../../services/fm-items.service';
 
 @Component({
   selector: 'app-search-items',
@@ -7,9 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchItemsComponent implements OnInit {
 
-  constructor() { }
+  listaItens: any[];
+
+  constructor(
+    private itensService: FmItemsService,
+  ) { }
 
   ngOnInit() {
+    this.buscarListaItens();
   }
+
+  buscarListaItens() {
+    this.itensService.buscarItens().subscribe(
+      res => this.listaItens = res
+    )
+  }
+
+
 
 }
