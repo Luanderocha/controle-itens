@@ -4,6 +4,7 @@ import { FmItensRoutingModule } from './fm-itens-routing.module';
 import { RegisterItemsComponent } from './components/register-items/register-items.component';
 import { SearchItemsComponent } from './components/search-items/search-items.component';
 import { FmItemsService } from './services/fm-items.service';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -11,6 +12,8 @@ import { FmItemsService } from './services/fm-items.service';
   imports: [
     CommonModule,
     FmItensRoutingModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers:[FmItemsService]
 })

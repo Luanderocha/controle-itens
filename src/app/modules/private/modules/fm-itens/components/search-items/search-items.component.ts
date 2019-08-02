@@ -24,6 +24,13 @@ export class SearchItemsComponent implements OnInit {
     )
   }
 
+  deletarItemId(id) {
+    this.itensService.excluirItemId(id).subscribe(
+      () => this.itensService.buscarItens().subscribe(
+        res => this.listaItens = res
+      )
+    )
+  }
 
 
 }

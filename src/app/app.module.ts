@@ -16,7 +16,6 @@ import { SharedComponentsModule } from './shared/shared-components/shared-compon
     BrowserModule,
     AppRoutingModule,
     SharedComponentsModule,
-    ReactiveFormsModule,
     HttpClientModule,
     
   ],

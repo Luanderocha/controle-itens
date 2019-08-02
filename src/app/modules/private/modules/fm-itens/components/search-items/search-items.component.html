@@ -61,9 +61,8 @@
                             <td>{{item.descricao}}</td>
                             <td>
                                 <button class="btn btn-outline-secondary">editar</button>&nbsp;
-                                <button class="btn btn-outline-secondary">excluir</button>
+                                <button (click)="deletarItemId(item.id)" class="btn btn-outline-secondary">excluir</button>
                             </td>
-
                         </tr>
                     </tbody>
                 </table>

@@ -1,51 +1,21 @@
 {
-  "itens": [
+  "itens": [],
+  "tipos": [
     {
-      "id":1,
-      "codigo": 1,
-      "tipo": "desktop",
-      "marca": "lenovo",
-      "cor":"preto",
-      "valor":500,
-      "descricao":"Possui alguns arranhões"
+      "id": 1,
+      "descricao": "Notebook"
     },
     {
-      "id":2,
-      "codigo": 2,
-      "tipo": "notebook",
-      "marca": "dell",
-      "cor":"preto",
-      "valor":2000,
-      "descricao":"carregador com mal contato"
-    }
-  ],
-  "cadastrar":[
-    {
-      "id":1,
-      "codigo": 1,
-      "tipo": "desktop",
-      "marca": "lenovo",
-      "cor":"preto",
-      "valor":500,
-      "descricao":"Possui alguns arranhões"
-    }
-  ],
-  "tipos":[
-    {
-      "id":1,
-      "descricao":"Notebook"
+      "id": 2,
+      "descricao": "Desktop"
     },
     {
-      "id":2,
-      "descricao":"Desktop"
+      "id": 3,
+      "descricao": "Mouse"
     },
     {
-      "id":3,
-      "descricao":"Mouse"
-    },
-    {
-      "id":4,
-      "descricao":"Teclado"
+      "id": 4,
+      "descricao": "Teclado"
     }
   ]
 }
