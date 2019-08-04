@@ -3,8 +3,7 @@
     <div class="col-mb-3 text-center">
         <div class="row">
             <div class="col-md-6 text-right">
-                <button type="button" class="btn btn-secondary" [routerLink]="['../cadastrar']">Cadastrar
-                    Itens</button>
+                <button type="button" class="btn btn-secondary" [routerLink]="['../cadastrar']">Cadastrar Itens</button>
             </div>
             <div class="col-md-6 text-left">
                 <button type="button" class="btn btn-outline-secondary" [routerLink]="['/ctis']">voltar</button>
@@ -18,21 +17,12 @@
             <div class="col-md-2">
                 <label>
                     <h5 style="text-align: justify">
-                        Pesquisar itens
+                        Pesquisar Funcionário
                     </h5>
                 </label>
             </div>
             <div class="col-md-4">
-                <form>
-                    <input
-                    name="item"
-                    id="item"
-                    class="form-control"
-                    placeholder="Itens..."
-                    ngModel
-                    #item="ngModel"
-                    (change)="pesquisar(item)">
-                </form>
+                <input class="form-control" placeholder="Funcionário...">
             </div>
             <div class="col-md-2">
                 <button type="button" class="btn btn-secondary">Pesquisar</button>
@@ -51,27 +41,21 @@
                 <table class="table table-striped">
                     <thead>
                         <tr class="text-center">
-                            <th scope="col">codigo</th>
-                            <th scope="col">Tipo</th>
-                            <th scope="col">marca</th>
-                            <th scope="col">cor</th>
-                            <th scope="col">valor</th>
-                            <th scope="col">Descrição</th>
-                            <th scope="col">ações</th>
+                            <th scope="col">Matrícula</th>
+                            <th scope="col">Nome</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Ações</th>
                         </tr>
                     </thead>
-                    <tbody *ngFor="let item of itens">
+                    <tbody *ngFor="let funcionario of listaFuncionarios">
                         <tr class="text-center">
-                            <th scope="row">{{item.codigo}}</th>
-                            <td>{{item.tipo}}</td>
-                            <td>{{item.marca}}</td>
-                            <td>{{item.cor}}</td>
-                            <td>{{item.valor}}</td>
-                            <td>{{item.descricao}}</td>
+                            <td>{{funcionario.matricula}}</td>
+                            <td>{{funcionario.nome}}</td>
+                            <td>{{funcionario.email}}</td>
                             <td>
-                                <button [routerLink]="['../editar/' , item.id]"
+                                <button [routerLink]="['../editar/' , funcionario.id]"
                                     class="btn btn-outline-secondary">editar</button>&nbsp;
-                                <button (click)="deletarItemId(item.id)"
+                                <button (click)="deletarFuncionarioId(funcionario.id)"
                                     class="btn btn-outline-secondary">excluir</button>
                             </td>
                         </tr>

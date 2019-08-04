@@ -17,5 +17,13 @@
       "id": 4,
       "descricao": "Teclado"
     }
+  ],
+  "funcionarios": [
+    {
+      "id": 1,
+      "nome": "luan",
+      "matricula": "404759",
+      "email": "luan@gmail.com"
+    }
   ]
 }

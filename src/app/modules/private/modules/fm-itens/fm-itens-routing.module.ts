@@ -7,8 +7,8 @@ import { RegisterItemsComponent } from './components/register-items/register-ite
 const routes: Routes = [
   { path: '', redirectTo: 'pesquisar', pathMatch: 'full' },
   { path: 'pesquisar', component: SearchItemsComponent },
-  { path: 'cadastrar', component: RegisterItemsComponent },
-  { path: 'editar/:id', component: RegisterItemsComponent }
+  { path: 'cadastrar', component: RegisterItemsComponent, data: { titulo: 'Cadastrar' } },
+  { path: 'editar/:id', component: RegisterItemsComponent, data: { titulo: 'Editar' } }
 ];
 
 @NgModule({

@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { FmItemsService } from '../../services/fm-items.service';
+import { ItemInterface } from '../../models/item.interface';
 
 @Component({
-  selector: 'app-search-items',
   templateUrl: './search-items.component.html',
   styleUrls: ['./search-items.component.css']
 })
 export class SearchItemsComponent implements OnInit {
 
-  listaItens: any[];
+  itens: ItemInterface[];
 
   constructor(
     private itensService: FmItemsService,
@@ -18,19 +18,23 @@ export class SearchItemsComponent implements OnInit {
     this.buscarListaItens();
   }
 
-  buscarListaItens() {
-    this.itensService.buscarItens().subscribe(
-      res => this.listaItens = res
-    )
+  pesquisar(item:string){
+    console.log(item);
   }
 
-  deletarItemId(id) {
-    this.itensService.excluirItemId(id).subscribe(
-      () => this.itensService.buscarItens().subscribe(
-        res => this.listaItens = res
-      )
-    )
+  buscarListaItens() {
+    this.itensService.buscarItens().subscribe(
+      res => this.itens = res
+    );
   }
+
+  deletarItemId(id:number) {
+    this.itensService.excluirItemId(id).subscribe(
+      () => this.buscarListaItens()
+    );
+  }
+
+
 
 
 }
