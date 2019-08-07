@@ -14,7 +14,6 @@ export class TabelaComponent implements OnInit {
 
   titulos: string[];
   descricoes: string[];
-  titulo = ['titulo', 'rg', 'cpf',]
   valores = [
     {
       nome: "luan",
