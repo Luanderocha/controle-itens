@@ -1,4 +1,6 @@
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
+import { AutenticacaoService } from 'src/app/core/autenticacao.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -7,15 +9,35 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(
-    private router: Router,
-  ) { }
+  usuario: FormGroup
 
-  ngOnInit() {
+  constructor(
+    private fb: FormBuilder,
+    // private autenticacaoService: AutenticacaoService,
+    private router:Router
+  ) {
   }
 
-  logar(){
-    this.router.navigateByUrl('/home');
+  ngOnInit() {
+    this.criarForm();
+  }
+
+  criarForm() {
+    this.usuario = this.fb.group({
+      nome: ['', Validators.required],
+      senha: ['', Validators.required]
+    });
+  }
+
+  entrar() {
+    this.router.navigateByUrl('/ctis/home')
+    // const nome = this.usuario.get('nome').value;
+    // const password = this.usuario.get('senha').value;
+    // this.autenticacaoService.autenticar(nome, password).subscribe(
+    //   () => alert("sucesso"),
+    //   err => alert(err.message)     
+    // );
   }
 
 }
+

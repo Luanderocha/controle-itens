@@ -3,8 +3,9 @@ import { Routes, RouterModule } from '@angular/router';
 
 
 const routes: Routes = [
-  {path:'' , redirectTo:'ctis' , pathMatch:'full'},
-  {path: 'ctis', loadChildren: './modules/private/private.module#PrivateModule'}
+  { path: '', redirectTo: 'ctis', pathMatch: 'full' },
+  // {path: 'ctis', loadChildren: './modules/private/private.module#PrivateModule'}
+  { path: 'ctis', loadChildren: './modules/public/public.module#PublicModule' }
 ];
 
 @NgModule({

@@ -6,6 +6,7 @@ import { ReactiveFormsModule } from "@angular/forms";
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SharedComponentsModule } from './shared/shared-components/shared-components.module';
+import { AutenticacaoService } from './core/autenticacao.service';
 
 
 @NgModule({
@@ -16,10 +17,9 @@ import { SharedComponentsModule } from './shared/shared-components/shared-compon
     BrowserModule,
     AppRoutingModule,
     SharedComponentsModule,
-    HttpClientModule,
-    
+    HttpClientModule,   
   ],
-  providers: [],
+  providers: [AutenticacaoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

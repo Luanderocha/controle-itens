@@ -1,5 +1,24 @@
 {
-  "itens": [],
+  "itens": [
+    {
+      "codigo": 123,
+      "tipo": "Desktop",
+      "marca": "dell",
+      "cor": "preto",
+      "valor": 1500,
+      "descricao": "teste",
+      "id": 2
+    },
+    {
+      "codigo": 1234,
+      "tipo": "Notebook",
+      "marca": "dell",
+      "cor": "preta",
+      "valor": 3000,
+      "descricao": "corei7",
+      "id": 3
+    }
+  ],
   "tipos": [
     {
       "id": 1,
@@ -24,6 +43,26 @@
       "nome": "luan",
       "matricula": "404759",
       "email": "luan@gmail.com"
+    }
+  ],
+  "login": [
+    {
+      "nome": "luan",
+      "senha": "123"
+    }
+  ],
+  "tabela": [
+    {
+      "nome": "luan",
+      "cpf": 123456789,
+      "rg": 123456,
+      "email": "luan@gmail.com"
+    },
+    {
+      "nome": "fulano",
+      "cpf": 123456789,
+      "rg": 123456,
+      "email": "fulano@gmail.com"
     }
   ]
 }

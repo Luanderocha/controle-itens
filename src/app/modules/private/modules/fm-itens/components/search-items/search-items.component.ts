@@ -18,9 +18,9 @@ export class SearchItemsComponent implements OnInit {
     this.buscarListaItens();
   }
 
-  pesquisar(item:string){
-    console.log(item);
-  }
+  // preencherCampo(item:string){
+    
+  // }
 
   buscarListaItens() {
     this.itensService.buscarItens().subscribe(

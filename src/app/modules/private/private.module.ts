@@ -10,7 +10,5 @@ import { PrivateRoutingModule } from './private-routing.module';
     CommonModule,
     PrivateRoutingModule,
   ],
-  exports:[],
-  providers:[]
 })
 export class PrivateModule { }

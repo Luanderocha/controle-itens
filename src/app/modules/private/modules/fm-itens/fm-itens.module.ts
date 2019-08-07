@@ -5,6 +5,7 @@ import { RegisterItemsComponent } from './components/register-items/register-ite
 import { SearchItemsComponent } from './components/search-items/search-items.component';
 import { FmItemsService } from './services/fm-items.service';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { SharedComponentsModule } from 'src/app/shared/shared-components/shared-components.module';
 
 
 @NgModule({
@@ -13,8 +14,9 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
     CommonModule,
     FmItensRoutingModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    SharedComponentsModule
   ],
-  providers:[FmItemsService]
+  providers: [FmItemsService]
 })
 export class FmItensModule { }

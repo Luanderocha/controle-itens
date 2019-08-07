@@ -9,36 +9,54 @@
             <label class="col-sm-2 col-form-label text-right">Código:</label>
             <div class="col-sm-4">
                 <input type="number" class="form-control" placeholder="código..." formControlName="codigo">
+                <app-mensagem-validacao texto="O campo código é obrigatório"
+                    *ngIf="formItem.get('codigo').errors?.required && formItem.get('codigo').touched">
+                </app-mensagem-validacao>
             </div>
             <label class="col-sm-2 col-form-label text-right">Tipo:</label>
             <div class="col-sm-4">
                 <select class="form-control" formControlName="tipo">
-                    <option [value]="null">selecione...</option>
+                    <option default [value]="null">selecione...</option>
                     <option *ngFor="let tipo of campoTipo" [value]="tipo.descricao">
                         {{tipo.descricao}}
                     </option>
                 </select>
+                <app-mensagem-validacao texto="O campo tipo é obrigatório"
+                    *ngIf="formItem.get('tipo').errors?.required && formItem.get('tipo').touched">
+                </app-mensagem-validacao>
             </div>
         </div>
         <div class="form-group row">
             <label class="col-sm-2 col-form-label text-right">Marca:</label>
             <div class="col-sm-4">
                 <input type="text" class="form-control" placeholder="marca..." formControlName="marca">
+                <app-mensagem-validacao texto="O campo marca é obrigatório"
+                    *ngIf="formItem.get('marca').errors?.required && formItem.get('marca').touched">
+                </app-mensagem-validacao>
             </div>
             <label class="col-sm-2 col-form-label text-right">Cor:</label>
             <div class="col-sm-4">
                 <input type="text" class="form-control" placeholder="cor..." formControlName="cor">
+                <app-mensagem-validacao texto="O campo cor é obrigatório"
+                    *ngIf="formItem.get('cor').errors?.required && formItem.get('cor').touched">
+                </app-mensagem-validacao>
             </div>
         </div>
         <div class="form-group row">
             <label class="col-sm-2 col-form-label text-right">Valor:</label>
             <div class="col-sm-4">
                 <input type="number" class="form-control" placeholder="valor R$..." formControlName="valor">
+                <app-mensagem-validacao texto="O campo Valor é obrigatório"
+                    *ngIf="formItem.get('valor').errors?.required && formItem.get('valor').touched">
+                </app-mensagem-validacao>
             </div>
             <label class="col-sm-2 col-form-label text-right">Descrição:</label>
             <div class="col-sm-4">
                 <textarea class="form-control" maxlength="50" rows="1" placeholder="50 caracters..."
                     formControlName="descricao"></textarea>
+                <app-mensagem-validacao texto="O campo Descrição é obrigatório"
+                    *ngIf="formItem.get('descricao').errors?.required && formItem.get('descricao').touched">
+                </app-mensagem-validacao>
             </div>
         </div>
         <div class="form-group row">

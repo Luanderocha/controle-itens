@@ -1,7 +1,7 @@
 import { CampoTipoInterface } from './../../models/tipo.interface';
 import { FmItemsService } from './../../services/fm-items.service';
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
 import { ItemInterface } from '../../models/item.interface';
 import { Observable } from 'rxjs';
@@ -31,13 +31,13 @@ export class RegisterItemsComponent implements OnInit {
 
   criarFormItens() {
     this.formItem = this.fb.group({
-      codigo: [],
-      tipo: [''],
-      marca: [''],
-      cor: [''],
-      valor: [],
-      descricao: [],
-      id:[]
+      codigo: [null, Validators.required],
+      tipo: [null, Validators.required],
+      marca: ['', Validators.required],
+      cor: ['', Validators.required],
+      valor: [null, Validators.required],
+      descricao: ['', Validators.required],
+      id: [, Validators.required]
     });
     this._preencherFormEdicao();
   }
@@ -65,19 +65,19 @@ export class RegisterItemsComponent implements OnInit {
   }
 
   voltar() {
-    this.router.navigateByUrl('/ctis/itens/pesquisar');
+    this.router.navigateByUrl('/ctis/home/itens/pesquisar');
   }
-
 
   salvarItens() {
     const corpoRequisicao: Observable<ItemInterface> =
       this.atualizarForm()
-        ? this.itensService.atualizarItem(this.formItem.value, this.formItem.value)
+        ? this.itensService.atualizarItem(this.formItem.value.id, this.formItem.value)
         : this.itensService.salvarItem(this.formItem.value);
     corpoRequisicao.subscribe(
       () => {
-        this.formItem.reset(),
-          this.voltar()
+        alert('Sucess')
+        this.formItem.reset();
+        this.voltar();
       }
     );
   }
